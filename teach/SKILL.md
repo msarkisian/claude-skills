@@ -94,6 +94,7 @@ Most topics are a mix. Lean on the user's baseline (see the [calibration probe](
 Whenever you create or modify an HTML explainer, keep these in sync in the same pass — every time, no exceptions:
 
 - **Index**: Maintain `./explainers/index.html`, a beautiful landing page that lists every explainer in lesson order, each with its title and a one-line summary, linking to its file. Add the new explainer to the index as soon as you create it. This index is what you point the user at to open their explainers.
+- **Back-to-index link**: Every explainer must have a link back to `index.html` (e.g. in its header or footer). No exceptions — the index is the hub, and the user should always be one click from it.
 - **"Next" links**: A "next lesson" link is a promise. Never leave one pointing at a file that doesn't exist yet — either omit it until that lesson exists, or create both explainers in the same pass. When you do create the lesson a previous explainer points to, immediately go back and wire that previous explainer's "next" link to the real file.
 
 ## Acquiring Skills
