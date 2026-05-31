@@ -21,6 +21,7 @@ Only include these when they add genuine value. Most records won't need them.
 - **Status** frontmatter (`active | superseded by LR-NNNN`) — useful when an earlier understanding turns out to be wrong and is replaced.
 - **Evidence** — how the user demonstrated the understanding (a question answered, an exercise completed, prior experience cited). Useful when the claim might be revisited.
 - **Implications** — what this unlocks or rules out for future sessions. Worth recording when non-obvious.
+- **Calibration** — how the lesson's difficulty and depth landed, and the adjustment it implies for next time. Record along both axes: **level** (e.g. "breezed the quiz with no hesitation — go a level harder and skip review of X") and **depth** (e.g. "the recursion explainer stayed descriptive — next pass must reach why memoization changes the complexity"). Write this only when the read *changes* the calibration; a lesson that confirms the existing read needs no new record. This field is the durable home of the post-lesson reflection that steers the zone of proximal development.
 
 ## Numbering
 
@@ -34,6 +35,7 @@ Write one when any of these is true:
 2. **The user disclosed prior knowledge** — "I already know X." Record it so future sessions don't re-teach it. Also record the _depth_ claimed.
 3. **A misconception was corrected** — the user previously believed something wrong and now sees why. These are high-value: they predict future stumbling blocks for related topics.
 4. **The mission shifted in response to learning** — the user discovered they cared about something different than they thought. Cross-link to [[MISSION.md]] and update it.
+5. **A lesson recalibrated the level or depth** — the difficulty or depth missed (too easy, too hard, or too shallow) and you're adjusting future lessons in response. Record the corrected read so the adjustment persists across sessions. Use the **Calibration** optional section above.
 
 ### What does _not_ qualify
 

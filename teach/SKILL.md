@@ -41,6 +41,8 @@ Failing to understand the mission will mean knowledge acquisition is not grounde
 
 The user should always feel as if they are being challenged 'just enough'. The scope of the topic being taught should feel extremely tight, should be directly tied into their mission.
 
+**'Just enough' cuts both ways — but the two errors are not equal.** Teaching below the user's level is as much a ZPD violation as teaching above it: a lesson that is too easy wastes the session just as surely as one that is too hard. And the two failures show up differently — **overshooting is loud, undershooting is silent.** When a lesson is too hard, the user struggles visibly on the quiz or says so, and you can back off in-session; the interactive quiz is a tight enough loop to absorb the miss. When a lesson is too easy, the user breezes it, feels fine, and quietly gets less value — nobody flags it. So when you are unsure, **err toward too hard, not too easy.** The cheap, visible error is the one to prefer.
+
 The user may specify an exact thing they want to learn. If they don't, figure out their zone of proximal development by:
 
 - Reading their `learning-records`
@@ -61,6 +63,26 @@ Before the first lesson on a topic, get a real read on what the user already kno
 
 Either way — probed or skipped — you should hold an explicit baseline before producing the first explainer.
 
+### Reflecting after each lesson
+
+The calibration probe is a *prediction*; each lesson is an *observation* that should update it. So after every lesson, reflect — but **reflecting is not the same as interrupting.** The quiz you just ran is your evidence; usually you can read how the lesson landed without asking the user anything. Do that read every time. Only surface it to the user when their answer would actually change the next lesson.
+
+Reflect along two independent axes:
+
+- **Level** — was this pitched at the right point in the user's zone of proximal development? Evidence: how they handled the quiz. Recalibrates *what* to teach next and *how hard* to push.
+- **Depth** — did the lesson actually reach mechanism, first principles, and tradeoffs, or did it stop at surface description? This is about the quality of *your* teaching, not the user's level: you can teach a beginner deeply or an expert shallowly, and a correct-level lesson can still be too shallow. If it stopped at description, go deeper next time on the same material rather than moving on.
+
+When judging level, distinguish **productive struggle** (the user is working hard and getting there — this is the goal; stay the course) from **unproductive flailing** (a missing prerequisite, no traction — back up and fill the gap). Do not read all struggle as 'too hard'; desirable difficulty is the point, and over-correcting toward comfortable is how lessons drift shallow.
+
+**Surface a question to the user only when the read would change the next lesson** — specifically:
+
+- **After the first lesson**, always — this is the prediction's first contact with reality.
+- **On a prediction violation** — they breezed something that should have been hard, or flailed on something that should have been easy. The surprise is the signal.
+- **On a genuine productive-vs-unproductive ambiguity** — when the evidence honestly can't tell you whether the friction was load-bearing.
+- **At a fork** — when you're about to change subtopic or direction and the level read steers where to go.
+
+Otherwise, record the read and carry on. Don't break the flow of a lesson that is clearly working just to ask how it's going. Capture the read in the relevant learning record's **Calibration** field (see [LEARNING-RECORD-FORMAT.md](./LEARNING-RECORD-FORMAT.md)) — but only when the read *changes*; a lesson that merely confirms the existing calibration needs no new ink.
+
 ## Glossary
 
 A key part of acquiring knowledge is compressing knowledge into language. Once a term is known and understood, it can be used and combined in new ways to make more complex terms easier to understand.
@@ -72,6 +94,8 @@ Building the glossary should be done once you feel confident that the user under
 Knowledge and skills usually need to be taught as a 1-2 punch. You teach the knowledge first, then get the user to practice the skills via exercises.
 
 Knowledge should first be gathered from trusted resources, then taught to the user via HTML explainers. These explainers should be beautiful, adhere to the glossary, and be saved to the `./explainers/` directory where they can be reviewed later.
+
+Teach to **mechanism**, not just description. A good explainer does not stop at *what* something is — it reaches *why it works*, the first principles underneath it, the failure modes, and the tradeoffs against alternatives. Description alone is the surface-level trap: it feels like teaching but leaves the user unable to reason about anything you didn't explicitly cover. The depth target is set by the mission: go deep enough that the user could apply the idea to a situation you never showed them.
 
 You should make opening the HTML explainer as easy as possible for the user, ideally with a CLI command they can run.
 
