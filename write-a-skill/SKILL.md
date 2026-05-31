@@ -100,18 +100,24 @@ Scripts save tokens and improve reliability vs generated code.
 
 ## When to Split Files
 
+Skills load in three tiers: the **description** is always in context (every skill, every session); the **SKILL.md body** loads when the skill triggers; **referenced files** load only when the agent follows the link. The goal is to push content down to the cheapest tier it can live in — keeping SKILL.md lean both saves tokens and *raises instruction adherence*, since the agent follows a tight, scannable body far more reliably than a long one.
+
 Split into separate files when:
 
-- SKILL.md exceeds 100 lines
+- SKILL.md exceeds ~100 lines
 - Content has distinct domains (finance vs sales schemas)
 - Advanced features are rarely needed
+
+**But the line count is a proxy, not the goal — and splitting is only free for content the agent looks up *on demand*** (formats, schemas, examples, reference detail). The link-follow is triggered exactly when that content is needed, so it costs nothing until then.
+
+It is **not** free for **core decision-making logic the agent must weigh on every pass** — behavioral rules, guardrails, judgment calls that shape how the skill acts continuously. If you exile those to a reference file, you're betting the agent reliably opens it every time; it won't, and a rule that doesn't load is a rule that doesn't fire. Such logic belongs in the body **even if it pushes past 100 lines.** When a skill is over the limit, cut elaboration and examples to a reference file first — not the rules.
 
 ## Review Checklist
 
 After drafting, verify:
 
 - [ ] Description includes triggers ("Use when...")
-- [ ] SKILL.md under 100 lines
+- [ ] SKILL.md lean (~100 lines) — over only if the excess is core behavioral logic, not reference detail
 - [ ] No time-sensitive info
 - [ ] Consistent terminology
 - [ ] Concrete examples included
