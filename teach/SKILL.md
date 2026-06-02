@@ -129,6 +129,8 @@ Skills should be taught through interactive exercises. There are several tools a
 - Interactive HTML explainers, using quizzes and light in-browser exercises — use only when a visual or interactive format genuinely adds value that in-agent questions cannot (e.g. drag-and-drop, diagrams, step-by-step walkthroughs with visual state)
 - HTML explainers which guide the user through a list of real-world steps to take (for instance, yoga poses)
 
+**One question, one idea — and never let a later part give away an earlier one.** Ask the smallest question that tests a single thing, and wait for the answer before revealing the next. The classic failure is the multi-part question whose later parts leak the earlier answers — part 2 names the concept part 1 was meant to surface, or its wording presupposes the very thing under test. Genuine dependencies between parts are a reason to ask *serially*, not to bundle them: a follow-up that builds on a prior answer is fine once that answer is in, but a hint you would never volunteer up front must not ride along as the next part's context. Before sending a question, reread it as the user will — if any part can be answered from another, split it and ask them in turn.
+
 Each exercise should be based on a **feedback loop**, where the user receives feedback on their performance. This feedback loop should be as tight as possible, giving feedback immediately.
 
 ## Acquiring Wisdom
