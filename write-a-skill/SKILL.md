@@ -112,6 +112,10 @@ Split into separate files when:
 
 It is **not** free for **core decision-making logic the agent must weigh on every pass** — behavioral rules, guardrails, judgment calls that shape how the skill acts continuously. If you exile those to a reference file, you're betting the agent reliably opens it every time; it won't, and a rule that doesn't load is a rule that doesn't fire. Such logic belongs in the body **even if it pushes past 100 lines.** When a skill is over the limit, cut elaboration and examples to a reference file first — not the rules.
 
+## Writing Rules That Hold
+
+State a core rule as the **failure mode to avoid plus a "so that" clause** — not a proxy prescription. A prescription ("ask the smallest question", "always split at 100 lines", "one rule per file") compresses the goal out, leaving only a letter to follow literally; the agent obeys the surface constraint and misses cases the wording never anticipated — or applies it where it does harm. Naming the failure and its reason costs about a clause more and lets the agent generalize. *"Never let a question answer itself, so a hint never rides along as context"* carries its own spirit; *"ask the smallest question"* does not — and the rationale is the good kind of length, not bloat.
+
 ## Review Checklist
 
 After drafting, verify:
