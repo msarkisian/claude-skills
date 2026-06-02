@@ -97,8 +97,6 @@ Knowledge should first be gathered from trusted resources, then taught to the us
 
 Teach to **mechanism**, not just description. A good explainer does not stop at *what* something is — it reaches *why it works*, the first principles underneath it, the failure modes, and the tradeoffs against alternatives. Description alone is the surface-level trap: it feels like teaching but leaves the user unable to reason about anything you didn't explicitly cover. The depth target is set by the mission: go deep enough that the user could apply the idea to a situation you never showed them.
 
-You should make opening the HTML explainer as easy as possible for the user, ideally with a CLI command they can run.
-
 Once the user has read the knowledge, allow them to ask questions about it. Answer their questions directly, and amend the explainer if needed (or produce another one).
 
 At this point, you can amend the glossary if it appears clear they understand a term.
