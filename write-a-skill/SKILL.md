@@ -16,7 +16,7 @@ description: Create new agent skills with proper structure, progressive disclosu
 
 2. **Draft the skill** - create:
    - SKILL.md with concise instructions
-   - Additional reference files if content exceeds 500 lines
+   - Additional reference files if the body grows past ~100 lines (see [When to Split Files](#when-to-split-files))
    - Utility scripts if deterministic operations needed
 
 3. **Review with user** - present draft and ask:
@@ -118,6 +118,7 @@ After drafting, verify:
 
 - [ ] Description includes triggers ("Use when...")
 - [ ] SKILL.md lean (~100 lines) — over only if the excess is core behavioral logic, not reference detail
+- [ ] No restatement — each idea appears once; reread as a reader (not the author) and cut clauses that re-make a point already made
 - [ ] No time-sensitive info
 - [ ] Consistent terminology
 - [ ] Concrete examples included
