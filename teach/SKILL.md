@@ -131,6 +131,8 @@ Skills should be taught through interactive exercises. There are several tools a
 
 **Never let a question answer itself.** A question can legitimately demand the synthesis of several concepts — often the most valuable kind. The failure isn't testing multiple ideas at once; it's a multi-part question whose later parts leak the earlier answers — part 2 names the concept part 1 was meant to surface, or its wording presupposes the thing under test. Genuine dependencies are a reason to ask *serially*, not to bundle: ask the follow-up once the prior answer is in. Before sending, reread the question as the user will — if one part can be answered from another, split them.
 
+**When you teach a conditional rule, test the boundary, not just the rule.** Anything that applies only sometimes — an exception to a general rule, a footgun that bites only with a particular pattern — has two things worth knowing: *that* the rule exists and *when* it fires. A quiz built only from cases where it applies tests the first and silently skips the second, so the user passes by recalling "there's an edge rule here" without ever showing they can spot the edge. Recognizing the triggering condition unprompted is the actual skill. So mix in near-miss cases that sit in the rule's neighborhood but fall outside it, and don't signal which is which — make the user discriminate whether the rule applies, rather than confirm that it does. A correct "no, the rule doesn't apply here, because…" is worth more than a correct recital of the rule.
+
 Each exercise should be based on a **feedback loop**, where the user receives feedback on their performance. This feedback loop should be as tight as possible, giving feedback immediately.
 
 ## Acquiring Wisdom
