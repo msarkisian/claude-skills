@@ -33,3 +33,11 @@ _Avoid_: Effort score, intensity rating
 - **Group under subheadings** when natural clusters emerge (e.g. `## Anatomy`, `## Programming`). A flat list is fine when terms cohere.
 - **Flag ambiguities explicitly.** If a term is used loosely in the wider field, note the resolution: "In this workspace, 'set' always means a working set — warm-ups are tracked separately."
 - **Revise as understanding deepens.** A definition the user wrote in week one may be wrong by week six. Update in place; do not leave stale entries.
+
+## HTML publication
+
+`GLOSSARY.md` is canonical, but a rendered copy is published as `./explainers/glossary.html` so the user can read it alongside the explainers. Re-render it from the markdown every time the markdown changes (see [SKILL.md](./SKILL.md)). The HTML should:
+
+- Be beautiful and visually consistent with the explainers in `./explainers/`.
+- Preserve the structure faithfully — topic description, subheadings, every term with its definition and its _Avoid_ aliases.
+- Carry a back-to-index link to `index.html`, exactly as explainers do — the index is the hub.

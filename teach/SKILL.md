@@ -12,7 +12,7 @@ The user has asked you to teach them something. This is a stateful request - the
 Treat the current directory as a teaching workspace. The state of their learning is captured in this directory in several files:
 
 - `MISSION.md`: A document capturing the _reason_ the user is interested in the topic. This should be used to ground all teaching. Use the format in [MISSION-FORMAT.md](./MISSION-FORMAT.md).
-- `GLOSSARY.md`: A glossary of terminology related to the topic. All workspace files should adhere to this terminology. Use the format in [GLOSSARY-FORMAT.md](./GLOSSARY-FORMAT.md).
+- `GLOSSARY.md`: A glossary of terminology related to the topic. All workspace files should adhere to this terminology. It is also published as `./explainers/glossary.html` and linked from the index. Use the format in [GLOSSARY-FORMAT.md](./GLOSSARY-FORMAT.md).
 - `RESOURCES.md`: A list of resources which can be explored to ground your teaching in contextual knowledge, or to acquire knowledge and wisdom. Use the format in [RESOURCES-FORMAT.md](./RESOURCES-FORMAT.md).
 - `./learning-records/*.md`: A directory of learning records, which capture what the user has learned. These are loosely equivalent to architectural decision records in software development - they capture non-obvious lessons and key insights that may need to be revised later, or drive future sessions. These should be used to calculate the zone of proximal development. They are titled `0001-<dash-case-name>.md`, where the number increments each time. Use the format in [LEARNING-RECORD-FORMAT.md](./LEARNING-RECORD-FORMAT.md).
 - `./explainers/`: The HTML explainers you produce, plus an `index.html` landing page that lists them all. See [Explainer bookkeeping](#explainer-bookkeeping).
@@ -89,6 +89,8 @@ A key part of acquiring knowledge is compressing knowledge into language. Once a
 
 Building the glossary should be done once you feel confident that the user understands the term. Glossaries should use a strict format, and use as concise a definition as possible.
 
+`GLOSSARY.md` is canonical; `glossary.html` is a derived view of it. Whenever you edit the markdown, re-render `./explainers/glossary.html` from it in the same pass by overwriting — don't hand-edit the HTML or treat it as a source. Leaving the two out of sync means the user reads a stale glossary from the index. See [GLOSSARY-FORMAT.md](./GLOSSARY-FORMAT.md) for the HTML.
+
 ## Acquiring Knowledge
 
 Knowledge and skills usually need to be taught as a 1-2 punch. You teach the knowledge first, then get the user to practice the skills via exercises.
@@ -115,7 +117,7 @@ Most topics are a mix. Lean on the user's baseline (see the [calibration probe](
 
 Whenever you create or modify an HTML explainer, keep these in sync in the same pass — every time, no exceptions:
 
-- **Index**: Maintain `./explainers/index.html`, a beautiful landing page that lists every explainer in lesson order, each with its title and a one-line summary, linking to its file. Add the new explainer to the index as soon as you create it. This index is what you point the user at to open their explainers.
+- **Index**: Maintain `./explainers/index.html`, a beautiful landing page that lists every explainer in lesson order, each with its title and a one-line summary, linking to its file, plus a link to the glossary (`glossary.html`). Add the new explainer to the index as soon as you create it. This index is what you point the user at to open their explainers.
 - **Back-to-index link**: Every explainer must have a link back to `index.html` (e.g. in its header or footer). No exceptions — the index is the hub, and the user should always be one click from it.
 - **"Next" links**: A "next lesson" link is a promise. Never leave one pointing at a file that doesn't exist yet — either omit it until that lesson exists, or create both explainers in the same pass. When you do create the lesson a previous explainer points to, immediately go back and wire that previous explainer's "next" link to the real file.
 
