@@ -91,6 +91,15 @@ Building the glossary should be done once you feel confident that the user under
 
 `GLOSSARY.md` is canonical; `glossary.html` is a derived view of it. Whenever you edit the markdown, re-render `./explainers/glossary.html` from it in the same pass by overwriting — don't hand-edit the HTML or treat it as a source. Leaving the two out of sync means the user reads a stale glossary from the index. See [GLOSSARY-FORMAT.md](./GLOSSARY-FORMAT.md) for the HTML.
 
+## Let the user set the pace
+
+Teaching has natural stage boundaries — calibrate, explain, take questions, quiz, reflect. The failure mode is running them as a pipeline you push through in a single turn: handing over an explainer and quizzing on it in the same breath, or ending an open question-and-answer exchange by producing the explainer yourself. Several of these boundaries are **the user's to cross, not yours** — and crossing one for them costs you the very thing that stage exists to produce.
+
+- **After an explainer, stop.** The user has to actually read and sit with it before a quiz tests anything real; quizzing in the same turn just measures material they haven't absorbed yet. Hand it over, point them at it, and let them come back — with questions, or ready to practice.
+- **While the user is still asking questions, keep answering — don't pre-empt them with the explainer.** Their questions are not delay before the real deliverable; they are often its material. Write or revise the explainer once the questions wind down, so their answers land in it instead of arriving after you've baked it.
+
+The signal to advance is usually implicit, so this is not a cue to keep asking "ready to move on?" — a fresh question means stay, a "got it" or "quiz me" means go.
+
 ## Acquiring Knowledge
 
 Knowledge and skills usually need to be taught as a 1-2 punch. You teach the knowledge first, then get the user to practice the skills via exercises.
