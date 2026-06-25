@@ -26,37 +26,35 @@ description: Create new agent skills with proper structure, progressive disclosu
 
 ## Skill Structure
 
+There is no fixed file set. A skill can be a single SKILL.md. Add companion files only for content the agent looks up on demand:
+
 ```
 skill-name/
-├── SKILL.md           # Main instructions (required)
-├── REFERENCE.md       # Detailed docs (if needed)
-├── EXAMPLES.md        # Usage examples (if needed)
-└── scripts/           # Utility scripts (if needed)
+├── SKILL.md            # Always loaded when triggered (required)
+├── REFERENCE.md        # Detailed docs the agent consults as needed
+├── SOMETHING-FORMAT.md # An output schema / format for an artifact the skill produces
+├── LANGUAGE.md         # A fixed vocabulary the skill must apply consistently
+└── scripts/            # Utility scripts, if a deterministic operation recurs
     └── helper.js
 ```
 
-## SKILL.md Template
+## SKILL.md shape
+
+Every skill starts with frontmatter:
 
 ```md
 ---
 name: skill-name
-description: Brief description of capability. Use when [specific triggers].
+description: What it does. Use when [specific triggers].
 ---
-
-# Skill Name
-
-## Quick start
-
-[Minimal working example]
-
-## Workflows
-
-[Step-by-step processes with checklists for complex tasks]
-
-## Advanced features
-
-[Link to separate files: See [REFERENCE.md](REFERENCE.md)]
 ```
+
+There is no canonical heading set — name sections for the work the skill actually does, so the body reads as the reasoning the agent applies rather than a generic shell. Two common archetypes, neither privileged:
+
+- **Capability skills** perform a deterministic operation (extract, convert, validate, render). Lead with a minimal working example; push reference detail and scripts to companion files.
+- **Process / judgment skills** encode how to act under ambiguity — what to surface, what to suppress, the failure modes to avoid and why. Here the body *is* the behavioral logic; favor prose over checklists where a rule needs its rationale to generalize.
+
+A single skill can be both. Let the task pick the shape; don't force either frame onto it.
 
 ## Description Requirements
 
